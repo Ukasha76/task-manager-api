@@ -8,7 +8,7 @@ module.exports.upload = multer({
 
     fileFilter(req, file, cb) {
         if (!file.mimetype.match(/^image\/(png|jpeg|jpg)$/)) {
-            return cb(new Error('Only JPEG/PNG/PDF files are allowed'));
+            return cb(new Error('Only JPEG/PNG files are allowed'));
         }
         cb(null, true);
     }
